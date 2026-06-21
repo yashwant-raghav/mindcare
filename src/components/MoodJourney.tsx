@@ -126,9 +126,9 @@ export default function MoodJourney({ user, moodEntries, onAddMoodExtended }: Mo
   });
 
   return (
-    <div className="p-8 max-w-6xl mx-auto space-y-8 bg-[#F8F9FA] min-h-screen" id="mood-page-container">
+    <div className="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8 bg-[#F8F9FA] min-h-screen" id="mood-page-container">
       {/* Title as a Bento Card Header */}
-      <div className="bg-white border border-gray-100 rounded-[2rem] p-8 shadow-xs relative overflow-hidden">
+      <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 shadow-xs relative overflow-hidden">
         <span className="text-xs font-mono font-bold text-blue-600 tracking-wider uppercase">Emotional Analytics</span>
         <h2 className="text-3xl font-extrabold text-gray-900 font-display mt-2">Mood Journey Tracker</h2>
         <p className="text-sm text-gray-500 mt-2 max-w-2xl leading-relaxed">
@@ -140,7 +140,7 @@ export default function MoodJourney({ user, moodEntries, onAddMoodExtended }: Mo
         
         {/* Check-In Column & factors */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-8 space-y-6 shadow-xs" id="checkin-container">
+          <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-6 shadow-xs" id="checkin-container">
             <div>
               <h3 className="text-base font-bold font-display text-gray-900">How are you feeling right now?</h3>
               <p className="text-xs text-gray-400 mt-1">Select a state level that matches your cognitive pace most accurately.</p>
@@ -247,7 +247,7 @@ export default function MoodJourney({ user, moodEntries, onAddMoodExtended }: Mo
           
           {/* AI Observation Card */}
           {currentAnalysis ? (
-            <div className="bg-white border border-emerald-500/20 bg-gradient-to-tr from-emerald-50/20 to-white rounded-[2rem] p-8 space-y-5 shadow-xs" id="ai-evaluation-box">
+            <div className="bg-white border border-emerald-500/20 bg-gradient-to-tr from-emerald-50/20 to-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-5 shadow-xs" id="ai-evaluation-box">
               <div className="flex items-center space-x-2 text-emerald-850">
                 <Sparkles className="w-5 h-5 text-amber-500 fill-amber-500" />
                 <h3 className="text-sm font-bold font-display uppercase tracking-wider">Serene AI Cognitive Review</h3>
@@ -296,7 +296,7 @@ export default function MoodJourney({ user, moodEntries, onAddMoodExtended }: Mo
               <p className="text-[8px] font-mono text-center text-gray-400 pt-1">Cognitive Guidance powered by MindCare Advisor.</p>
             </div>
           ) : (
-            <div className="bg-white border border-gray-100 rounded-[2rem] p-8 flex flex-col justify-center text-center shadow-xs min-h-[300px]" id="no-analysis-yet">
+            <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 flex flex-col justify-center text-center shadow-xs min-h-[300px]" id="no-analysis-yet">
               <div className="my-auto space-y-3">
                 <Smile className="w-12 h-12 text-blue-600 mx-auto animate-bounce-slow" />
                 <h4 className="text-sm font-bold text-gray-900">Awaiting Cognitive Data</h4>
@@ -308,7 +308,7 @@ export default function MoodJourney({ user, moodEntries, onAddMoodExtended }: Mo
           )}
 
           {/* Calendar Heatmap simulated preview */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-8 space-y-4 shadow-xs" id="monthly-trends">
+          <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-4 shadow-xs" id="monthly-trends">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Monthly Trends</h3>

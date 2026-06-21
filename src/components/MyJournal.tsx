@@ -121,9 +121,9 @@ export default function MyJournal({ user, journalEntries, onAddJournalEntry, onD
   );
 
   return (
-    <div className="p-8 max-w-6xl mx-auto space-y-8 bg-[#F8F9FA] min-h-screen" id="journal-page-container">
+    <div className="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8 bg-[#F8F9FA] min-h-screen" id="journal-page-container">
       {/* Title as a Bento Card Header */}
-      <div className="bg-white border border-gray-100 rounded-[2rem] p-8 shadow-xs relative overflow-hidden">
+      <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 shadow-xs relative overflow-hidden">
         <span className="text-xs font-mono font-bold text-blue-600 tracking-wider uppercase">Expressive Catharsis</span>
         <h2 className="text-3xl font-extrabold text-gray-900 font-display mt-2 font-display">My Journal</h2>
         <p className="text-sm text-gray-500 mt-1 max-w-xl leading-relaxed">
@@ -136,7 +136,7 @@ export default function MyJournal({ user, journalEntries, onAddJournalEntry, onD
         {/* Left Side: Entries Search and Inspiration */}
         <div className="lg:col-span-4 space-y-6">
           {/* Search */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-6 space-y-3 shadow-xs">
+          <div className="bg-white border border-gray-100 rounded-2xl p-5 space-y-3 shadow-xs">
             <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Search Reflections</h3>
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -152,7 +152,7 @@ export default function MyJournal({ user, journalEntries, onAddJournalEntry, onD
           </div>
 
           {/* Prompt Inspiration Card */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-6 space-y-4 shadow-xs" id="inspiration-card">
+          <div className="bg-white border border-gray-100 rounded-2xl p-5 space-y-4 shadow-xs" id="inspiration-card">
             <div>
               <h3 className="text-xs font-mono font-bold tracking-wider text-blue-600 uppercase">Inspiration Prompts</h3>
               <p className="text-[10px] text-gray-400 mt-0.5">Stuck in a mental loop? Click to select a gentle prompt.</p>
@@ -176,7 +176,7 @@ export default function MyJournal({ user, journalEntries, onAddJournalEntry, onD
           </div>
 
           {/* Recent reflections list */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-6 space-y-4 shadow-xs" id="recent-reflections">
+          <div className="bg-white border border-gray-100 rounded-2xl p-5 space-y-4 shadow-xs" id="recent-reflections">
             <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Recent Reflections</h3>
             
             {filteredEntries.length === 0 ? (
@@ -228,7 +228,7 @@ export default function MyJournal({ user, journalEntries, onAddJournalEntry, onD
         <div className="lg:col-span-8 space-y-6">
           
           {/* Write New Reflection Form */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-8 space-y-5 shadow-xs" id="editor-box">
+          <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-5 shadow-xs" id="editor-box">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <Feather className="w-4 h-4 text-blue-600" />
@@ -317,7 +317,7 @@ export default function MyJournal({ user, journalEntries, onAddJournalEntry, onD
 
           {/* Selected View Card displaying both full text and AI Therapy Report */}
           {activeEntryView && (
-            <div className="bg-white border border-gray-100 rounded-[2rem] p-8 space-y-6 shadow-xs animate-fade-in" id="entry-viewer">
+            <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-6 shadow-xs animate-fade-in" id="entry-viewer">
               <div className="space-y-2 border-b border-gray-100 pb-4">
                 <span className="text-[10px] font-mono uppercase bg-indigo-50 border border-indigo-200 text-indigo-700 px-2.5 py-1 rounded-md">
                   Active Entry View

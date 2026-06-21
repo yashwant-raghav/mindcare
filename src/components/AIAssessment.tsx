@@ -115,9 +115,9 @@ export default function AIAssessment({ user }: AIAssessmentProps) {
   };
 
   return (
-    <div className="p-8 max-w-5xl mx-auto space-y-6 bg-[#F8F9FA] min-h-screen flex flex-col justify-between" id="chat-page-container">
+    <div className="p-4 sm:p-6 lg:p-8 max-w-5xl mx-auto space-y-4 sm:space-y-6 bg-[#F8F9FA] min-h-screen flex flex-col justify-between" id="chat-page-container">
       {/* Title Bento Card Header */}
-      <div className="bg-white border border-gray-100 rounded-[2rem] p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 shadow-xs relative overflow-hidden">
+      <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 shadow-xs relative overflow-hidden">
         <div>
           <span className="text-xs font-mono font-bold text-blue-600 tracking-wider uppercase">Generative Guidance</span>
           <h2 className="text-3xl font-extrabold text-gray-900 font-display mt-1">AI CBT Companion</h2>
@@ -137,7 +137,7 @@ export default function AIAssessment({ user }: AIAssessmentProps) {
       </div>
 
       {/* Main chat interface block */}
-      <div className="flex-1 bg-white border border-gray-100 rounded-[2.2rem] flex flex-col h-[520px] overflow-hidden shadow-xs" id="chat-stage-wrapper">
+      <div className="flex-1 bg-white border border-gray-100 rounded-2xl sm:rounded-[2.2rem] flex flex-col h-[450px] sm:h-[520px] overflow-hidden shadow-xs" id="chat-stage-wrapper">
         
         {/* Messages Stream */}
         <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-gray-50/45">

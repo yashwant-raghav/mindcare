@@ -1,6 +1,6 @@
 import { 
   Smile, BookOpen, Music, Activity, 
-  Compass, User, LogOut, MessageSquareHeart 
+  Compass, User, LogOut, MessageSquareHeart, X 
 } from "lucide-react";
 import { User as UserType } from "../types";
 
@@ -9,9 +9,11 @@ interface SidebarProps {
   setActiveTab: (tab: string) => void;
   user: UserType;
   onLogout: () => void;
+  isOpen?: boolean;
+  onClose?: () => void;
 }
 
-export default function Sidebar({ activeTab, setActiveTab, user, onLogout }: SidebarProps) {
+export default function Sidebar({ activeTab, setActiveTab, user, onLogout, isOpen, onClose }: SidebarProps) {
   const menuItems = [
     { id: "dashboard", label: "Dashboard", icon: Compass },
     { id: "mood", label: "Mood Journey", icon: Smile },
@@ -23,7 +25,12 @@ export default function Sidebar({ activeTab, setActiveTab, user, onLogout }: Sid
   ];
 
   return (
-    <aside className="w-64 bg-white border-r border-gray-200 flex flex-col justify-between h-screen sticky top-0" id="app-sidebar">
+    <aside 
+      className={`w-64 bg-white border-r border-gray-200 flex flex-col justify-between h-screen transition-transform duration-300 ease-in-out z-50 
+        ${isOpen ? "translate-x-0 shadow-xl" : "-translate-x-full lg:translate-x-0"} 
+        fixed top-0 left-0 lg:sticky lg:top-0 lg:flex`} 
+      id="app-sidebar"
+    >
       <div>
         {/* Brand Header */}
         <div className="p-6 border-b border-gray-200 flex items-center justify-between">
@@ -36,11 +43,20 @@ export default function Sidebar({ activeTab, setActiveTab, user, onLogout }: Sid
               <p className="text-[10px] font-mono text-blue-600 font-semibold tracking-wider uppercase">Serene Clarity</p>
             </div>
           </div>
-          {user.isPro && (
-            <span className="text-[9px] font-mono bg-blue-50 border border-blue-200 text-blue-700 px-1.5 py-0.5 rounded-md font-semibold">
-              PRO
-            </span>
-          )}
+          <div className="flex items-center space-x-2">
+            {user.isPro && (
+              <span className="text-[9px] font-mono bg-blue-50 border border-blue-200 text-blue-700 px-1.5 py-0.5 rounded-md font-semibold">
+                PRO
+              </span>
+            )}
+            <button 
+              onClick={onClose}
+              className="lg:hidden p-1 text-gray-400 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
+              title="Close Menu"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Navigation Tabs */}

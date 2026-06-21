@@ -54,9 +54,9 @@ export default function Profile({ user, moodEntries, journalEntries, onResetProg
   ];
 
   return (
-    <div className="p-8 max-w-5xl mx-auto space-y-8 bg-[#F8F9FA] min-h-screen" id="profile-container">
+    <div className="p-4 sm:p-6 lg:p-8 max-w-5xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8 bg-[#F8F9FA] min-h-screen" id="profile-container">
       {/* Bio and cover block */}
-      <div className="bg-white border border-gray-100 rounded-[2rem] p-8 relative overflow-hidden shadow-xs" id="profile-hero-card">
+      <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 relative overflow-hidden shadow-xs" id="profile-hero-card">
         {/* Background visual curve */}
         <div className="absolute right-[-20px] top-[-20px] w-48 h-48 bg-blue-105/30 rounded-full blur-3xl -z-10" />
 
@@ -122,7 +122,7 @@ export default function Profile({ user, moodEntries, journalEntries, onResetProg
 
       {/* Stats row cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6" id="profile-stats-grid">
-        <div className="bg-white border border-gray-100 rounded-[2rem] p-6 flex items-center justify-between shadow-xs">
+        <div className="bg-white border border-gray-100 rounded-2xl p-5 flex items-center justify-between shadow-xs">
           <div>
             <span className="text-[10px] font-mono text-gray-400 uppercase">Check-in Streak</span>
             <p className="text-3xl font-black font-display text-gray-950 mt-1">{user.streak} days</p>
@@ -135,7 +135,7 @@ export default function Profile({ user, moodEntries, journalEntries, onResetProg
           </div>
         </div>
 
-        <div className="bg-white border border-gray-100 rounded-[2rem] p-6 flex items-center justify-between shadow-xs">
+        <div className="bg-white border border-gray-100 rounded-2xl p-5 flex items-center justify-between shadow-xs">
           <div>
             <span className="text-[10px] font-mono text-gray-400 uppercase">Total Meditated</span>
             <p className="text-3xl font-black font-display text-gray-950 mt-1">{user.totalMinutes}m</p>
@@ -146,7 +146,7 @@ export default function Profile({ user, moodEntries, journalEntries, onResetProg
           </div>
         </div>
 
-        <div className="bg-white border border-gray-100 rounded-[2rem] p-6 flex items-center justify-between shadow-xs">
+        <div className="bg-white border border-gray-100 rounded-2xl p-5 flex items-center justify-between shadow-xs">
           <div>
             <span className="text-[10px] font-mono text-gray-400 uppercase">CBT Processing Logs</span>
             <p className="text-3xl font-black font-display text-gray-950 mt-1">{totalEntriesLength}</p>
@@ -163,7 +163,7 @@ export default function Profile({ user, moodEntries, journalEntries, onResetProg
         {/* Left Preference details */}
         <div className="lg:col-span-2 space-y-6">
           {/* Diagnostic Clinical insight card */}
-          <div className="bg-gradient-to-tr from-blue-500/10 to-indigo-500/5 border border-blue-500/15 rounded-[2rem] p-6 space-y-4 shadow-xxs" id="clinical-diagnostic-insight">
+          <div className="bg-gradient-to-tr from-blue-500/10 to-indigo-500/5 border border-blue-500/15 rounded-2xl p-5 space-y-4 shadow-xxs" id="clinical-diagnostic-insight">
             <div className="flex items-center space-x-2 text-blue-900">
               <Sparkles className="w-4.5 h-4.5 text-blue-600 fill-blue-600" />
               <h3 className="text-xs font-mono font-bold uppercase tracking-wider">Deep Resilience Insights</h3>
@@ -180,7 +180,7 @@ export default function Profile({ user, moodEntries, journalEntries, onResetProg
           </div>
 
           {/* Settings Lists preferences */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-8 space-y-4 shadow-xs" id="preferences-list">
+          <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-4 shadow-xs" id="preferences-list">
             <h3 className="text-sm font-bold font-display text-gray-900">Privacy & Client Preferences</h3>
             
             <div className="divide-y divide-gray-100 text-xs">
@@ -250,7 +250,7 @@ export default function Profile({ user, moodEntries, journalEntries, onResetProg
 
         {/* Right accomplishments panel */}
         <div className="space-y-6">
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-6 space-y-4 shadow-xs" id="achievements-box">
+          <div className="bg-white border border-gray-100 rounded-2xl p-5 space-y-4 shadow-xs" id="achievements-box">
             <div className="flex items-center space-x-2">
               <Award className="w-5 h-5 text-blue-600 font-bold" />
               <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Recent Accomplishments</h3>
@@ -285,7 +285,7 @@ export default function Profile({ user, moodEntries, journalEntries, onResetProg
       {/* Profile Picture Change Modal */}
       {showAvatarModal && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-xs flex items-center justify-center z-50 p-4 transition-opacity duration-300 animate-fade-in" id="avatar-modal">
-          <div className="bg-white rounded-[2rem] border border-gray-100 w-full max-w-lg p-6 relative shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto" id="avatar-modal-body">
+          <div className="bg-white rounded-2xl sm:rounded-[2rem] border border-gray-100 w-full max-w-lg p-5 sm:p-6 relative shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto" id="avatar-modal-body">
             {/* Header */}
             <div className="flex items-center justify-between">
               <div>

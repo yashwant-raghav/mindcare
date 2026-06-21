@@ -171,9 +171,9 @@ export default function MindfulMotion({ user, onUpdateMeditationMinutes }: Mindf
     : MASTER_EXERCISES_CATALOG.filter(e => e.category === activeCategory);
 
   return (
-    <div className="p-8 max-w-6xl mx-auto space-y-8 bg-[#F8F9FA] min-h-screen" id="exercises-page">
+    <div className="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8 bg-[#F8F9FA] min-h-screen" id="exercises-page">
       {/* Title Bento Box */}
-      <div className="bg-white border border-gray-100 rounded-[2rem] p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-xs relative overflow-hidden">
+      <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-xs relative overflow-hidden">
         <div>
           <span className="text-xs font-mono font-bold text-blue-600 tracking-wider uppercase">Somatic Grounding</span>
           <h2 className="text-3xl font-extrabold text-gray-900 font-display mt-1">Mindful Motion</h2>
@@ -204,7 +204,7 @@ export default function MindfulMotion({ user, onUpdateMeditationMinutes }: Mindf
       <div className="grid lg:grid-cols-12 gap-8">
         
         {/* Interactive Box Breathing Stage (Large Card) */}
-        <div className="lg:col-span-8 bg-white border border-gray-100 rounded-[2rem] p-8 flex flex-col items-center justify-between min-h-[500px] shadow-xs" id="breathing-stage-box">
+        <div className="lg:col-span-8 bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 flex flex-col items-center justify-between min-h-[500px] shadow-xs" id="breathing-stage-box">
           <div className="text-center space-y-1">
             <span className="text-[10px] font-mono tracking-widest bg-blue-50 border border-blue-200/20 text-blue-600 px-3.5 py-1.5 rounded-full uppercase font-bold">
               Autonomous Box Breathing Rhythm
@@ -281,7 +281,7 @@ export default function MindfulMotion({ user, onUpdateMeditationMinutes }: Mindf
         <div className="lg:col-span-4 space-y-6">
           
           {/* Journey Stats Dashboard card */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-6 space-y-4 shadow-xs" id="mindful-stats-card">
+          <div className="bg-white border border-gray-100 rounded-2xl p-5 space-y-4 shadow-xs" id="mindful-stats-card">
             <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Your Mindful Journey</h3>
             
             <div className="grid grid-cols-2 gap-4">
@@ -314,7 +314,7 @@ export default function MindfulMotion({ user, onUpdateMeditationMinutes }: Mindf
           </div>
 
           {/* Exercise Details panel showing instructions */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-6 space-y-4 shadow-xs" id="focused-exercise-details">
+          <div className="bg-white border border-gray-100 rounded-2xl p-5 space-y-4 shadow-xs" id="focused-exercise-details">
             <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Active Guide Instruction</h3>
             
             <div className="space-y-2 border-b border-gray-100 pb-3">
@@ -341,7 +341,7 @@ export default function MindfulMotion({ user, onUpdateMeditationMinutes }: Mindf
       </div>
 
       {/* Exercises Library Grid selector */}
-      <div className="bg-white border border-gray-100 rounded-[2rem] p-8 space-y-4 shadow-xs" id="exercises-library">
+      <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-4 shadow-xs" id="exercises-library">
         <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Full Motion Library</h3>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">

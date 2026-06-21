@@ -591,9 +591,9 @@ export default function SonicSanctuary({ user, onUpdateStudyMinutes }: SonicSanc
     : playlist.filter(t => t.category === activeCategory);
 
   return (
-    <div className="p-8 max-w-6xl mx-auto space-y-8 bg-[#F8F9FA] min-h-screen pb-32" id="sonic-container">
+    <div className="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8 bg-[#F8F9FA] min-h-screen pb-32" id="sonic-container">
       {/* Title Bento Card Header */}
-      <div className="bg-white border border-gray-100 rounded-[2rem] p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-xs relative overflow-hidden">
+      <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-xs relative overflow-hidden">
         <div>
           <span className="text-xs font-mono font-bold text-blue-600 tracking-wider uppercase">Sound Therapy</span>
           <h2 className="text-3xl font-extrabold text-gray-900 font-display mt-1">Sonic Sanctuary</h2>
@@ -658,7 +658,7 @@ export default function SonicSanctuary({ user, onUpdateStudyMinutes }: SonicSanc
 
       {/* YouTube Music URL Loader */}
       {playerMode === "youtube" && (
-        <div className="bg-white border border-gray-100 rounded-[2rem] p-6 shadow-xs space-y-4 relative overflow-hidden">
+        <div className="bg-white border border-gray-100 rounded-2xl p-5 sm:p-6 shadow-xs space-y-4 relative overflow-hidden">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-gray-50 pb-4">
             <div className="flex items-center space-x-3.5 z-10">
               <div className="bg-red-50 text-red-600 p-3.5 rounded-2xl shrink-0">
@@ -731,7 +731,7 @@ export default function SonicSanctuary({ user, onUpdateStudyMinutes }: SonicSanc
         
         {/* Recommended Hero showcase */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="relative overflow-hidden bg-gray-950 text-white rounded-[2rem] p-8 aspect-video flex flex-col justify-between shadow-xs" id="recommended-hero-showcase">
+          <div className="relative overflow-hidden bg-gray-950 text-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 min-h-[260px] lg:aspect-video lg:min-h-0 flex flex-col justify-between shadow-xs" id="recommended-hero-showcase">
             {/* Background image overlay */}
             <div className="absolute inset-0 z-0">
               <img 
@@ -803,7 +803,7 @@ export default function SonicSanctuary({ user, onUpdateStudyMinutes }: SonicSanc
           </div>
 
           {/* Rapid grounding helper */}
-          <div className="bg-blue-50/50 border border-blue-100 rounded-[2rem] p-6 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-xxs">
+          <div className="bg-blue-50/50 border border-blue-100 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-xxs">
             <div className="flex items-start space-x-4">
               <div className="bg-blue-600 w-11 h-11 rounded-full flex items-center justify-center text-white shrink-0 mt-0.5 shadow-xs">
                 <Play className="w-4 h-4 fill-white ml-0.5" />
@@ -824,7 +824,7 @@ export default function SonicSanctuary({ user, onUpdateStudyMinutes }: SonicSanc
 
         {/* Browse Soundscapes list */}
         <div className="space-y-6">
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-6 space-y-4 shadow-xs" id="all-soundscapes">
+          <div className="bg-white border border-gray-100 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs" id="all-soundscapes">
             <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Browse Soundscapes</h3>
             
             <div className="space-y-3 max-h-[380px] overflow-y-auto pr-2">
@@ -902,7 +902,7 @@ export default function SonicSanctuary({ user, onUpdateStudyMinutes }: SonicSanc
       </div>
 
       {/* Persistent global audio player bar fixed at bottom */}
-      <div className="fixed bottom-4 left-4 right-4 sm:left-64 sm:right-8 bg-gray-900 text-gray-50 border border-gray-800 rounded-[1.5rem] py-4 px-6 flex flex-col md:flex-row justify-between items-center gap-4 z-40 shadow-2xl" id="global-player-bar">
+      <div className="fixed bottom-4 left-4 right-4 lg:left-72 lg:right-8 bg-gray-900 text-gray-50 border border-gray-800 rounded-[1.5rem] py-4 px-6 flex flex-col md:flex-row justify-between items-center gap-4 z-40 shadow-2xl" id="global-player-bar">
         
         {/* Track Details */}
         <div className="flex items-center space-x-3.5 w-full md:w-1/4">

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { User, MoodEntry, JournalEntry } from "./types";
+import { Menu } from "lucide-react";
 import LandingPage from "./components/LandingPage";
 import Auth from "./components/Auth";
 import Sidebar from "./components/Sidebar";
@@ -66,11 +67,12 @@ const PREPOPULATED_JOURNALS: JournalEntry[] = [
 ];
 
 export default function App() {
-  const [user, setUser] = useState<User | null>(null);
+   const [user, setUser] = useState<User | null>(null);
   const [authMode, setAuthMode] = useState<"landing" | "login" | "signup">("landing");
   const [activeTab, setActiveTab] = useState<string>("dashboard");
   const [moodEntries, setMoodEntries] = useState<MoodEntry[]>([]);
   const [journalEntries, setJournalEntries] = useState<JournalEntry[]>([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // 1. Recover active credentials on mount
   useEffect(() => {
@@ -329,19 +331,77 @@ export default function App() {
     );
   }
 
-  // 3. Authenticated dashboard layout with permanent side rails
+   // 3. Authenticated dashboard layout with permanent side rails
+  const activeTabLabels: Record<string, string> = {
+    dashboard: "Dashboard",
+    mood: "Mood Journey",
+    journal: "My Journal",
+    music: "Sonic Sanctuary",
+    exercises: "Mindful Motion",
+    chat: "AI CBT Companion",
+    profile: "Profile"
+  };
+  const activeTabLabel = activeTabLabels[activeTab] || "MindCare";
+
   return (
-    <div className="flex bg-[#F8F9FA] min-h-screen text-gray-950 selection:bg-blue-100 selection:text-blue-900 font-sans" id="app-workbench-layout">
+    <div className="flex flex-col lg:flex-row bg-[#F8F9FA] min-h-screen text-gray-950 selection:bg-blue-100 selection:text-blue-900 font-sans" id="app-workbench-layout">
+      {/* Mobile Top Navigation Header */}
+      <header className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 z-40" id="mobile-header">
+        <div className="flex items-center space-x-3">
+          <button 
+            onClick={() => setIsSidebarOpen(true)}
+            className="p-1.5 text-gray-500 hover:text-blue-600 hover:bg-gray-50 rounded-xl transition-colors cursor-pointer"
+            id="btn-mobile-menu"
+            title="Open Menu"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+          <div>
+            <span className="text-[10px] font-mono text-blue-600 font-bold uppercase tracking-wider block">MindCare</span>
+            <h1 className="text-xs font-bold text-gray-900 tracking-tight leading-none mt-0.5">{activeTabLabel}</h1>
+          </div>
+        </div>
+        
+        {/* Right action user avatar shortcut */}
+        <button 
+          onClick={() => setActiveTab("profile")}
+          className="w-8 h-8 rounded-full overflow-hidden border border-gray-200 cursor-pointer"
+          title="Go to Profile"
+        >
+          <img 
+            src={user?.avatar} 
+            alt={user?.name} 
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop";
+            }}
+            className="w-full h-full object-cover"
+          />
+        </button>
+      </header>
+
+      {/* Sidebar Backdrop Overlay on mobile */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black/40 backdrop-blur-xs z-45 lg:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar Rail */}
       <Sidebar 
         activeTab={activeTab} 
-        setActiveTab={setActiveTab} 
+        setActiveTab={(tab) => {
+          setActiveTab(tab);
+          setIsSidebarOpen(false); // Close mobile drawer on tab click
+        }} 
         user={user} 
         onLogout={handleLogout} 
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
       />
 
       {/* Main Screen Content Viewport */}
-      <main className="flex-1 overflow-y-auto h-screen relative" id="app-main-viewport">
+      <main className="flex-1 overflow-y-auto h-[calc(100vh-57px)] lg:h-screen relative" id="app-main-viewport">
         {renderActiveMainContent()}
       </main>
     </div>

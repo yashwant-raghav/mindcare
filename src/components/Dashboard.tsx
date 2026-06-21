@@ -72,9 +72,9 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
   };
 
   return (
-    <div className="p-8 max-w-6xl mx-auto space-y-8 bg-[#F8F9FA] min-h-screen" id="dashboard-container">
+    <div className="p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8 bg-[#F8F9FA] min-h-screen" id="dashboard-container">
       {/* Welcome Block as a Bento Card */}
-      <div className="bg-white border border-gray-100 rounded-[2rem] p-8 flex flex-col md:flex-row justify-between items-start md:items-center shadow-xs gap-6 relative overflow-hidden" id="dashboard-welcome">
+      <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center shadow-xs gap-6 relative overflow-hidden" id="dashboard-welcome">
         <div className="relative z-10">
           <span className="text-xs font-mono font-bold text-blue-600 tracking-wider uppercase">{formattedDate}</span>
           <h2 className="text-3xl font-extrabold text-gray-900 font-display mt-2">
@@ -102,7 +102,7 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
         <div className="lg:col-span-2 space-y-6">
           
           {/* 1. Daily Mood Widget */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-8 space-y-5 shadow-xs" id="dw-mood-logger">
+          <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-5 shadow-xs" id="dw-mood-logger">
             <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Quick Check-in</h3>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
               <h4 className="text-base font-bold text-gray-900 font-display">How is your energy right now?</h4>
@@ -141,7 +141,7 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
           </div>
 
           {/* 2. SVG Analytics Bar Chart */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-8 space-y-5 shadow-xs" id="dw-chart">
+          <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-5 shadow-xs" id="dw-chart">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <div>
                 <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Weekly Progress</h3>
@@ -210,7 +210,7 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
               </div>
               <button 
                 onClick={() => setActiveTab("profile")}
-                className="text-blue-600 hover:text-blue-700 hover:underline font-bold flex items-center self-end sm:self-auto"
+                className="text-blue-600 hover:text-blue-700 hover:underline font-bold flex items-center self-end sm:self-auto cursor-pointer"
               >
                 <span>Full Diagnostics</span>
                 <ArrowRight className="w-3 h-3 ml-0.5" />
@@ -223,7 +223,7 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
         <div className="space-y-6">
           
           {/* Quote Card */}
-          <div className="bg-indigo-600 text-white rounded-[2rem] p-8 flex flex-col justify-between aspect-square relative overflow-hidden shadow-xs" id="dw-quote">
+          <div className="bg-indigo-600 text-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 flex flex-col justify-between min-h-[220px] lg:aspect-square lg:min-h-0 relative overflow-hidden shadow-xs" id="dw-quote">
             <div className="absolute right-[-20px] bottom-[-20px] opacity-10">
               <Compass className="w-40 h-40 text-white" />
             </div>
@@ -243,20 +243,20 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
                 <button
                   key={idx}
                   onClick={() => setQuoteIndex(idx)}
-                  className={`w-2 h-2 rounded-full transition-all ${quoteIndex === idx ? "w-5 bg-white" : "bg-indigo-400"}`}
+                  className={`w-2 h-2 rounded-full transition-all cursor-pointer ${quoteIndex === idx ? "w-5 bg-white" : "bg-indigo-400"}`}
                 />
               ))}
             </div>
           </div>
 
           {/* Quick Access Actions Links */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] p-8 space-y-5 shadow-xs" id="dw-quicklinks">
+          <div className="bg-white border border-gray-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 space-y-5 shadow-xs" id="dw-quicklinks">
             <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Quick Journeys</h3>
             
             <div className="divide-y divide-gray-100">
               <button
                 onClick={() => setActiveTab("journal")}
-                className="w-full flex items-center justify-between py-4 hover:bg-gray-50 rounded-xl transition-all px-2 text-left"
+                className="w-full flex items-center justify-between py-4 hover:bg-gray-50 rounded-xl transition-all px-2 text-left cursor-pointer"
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 rounded-lg bg-orange-50 text-orange-700 flex items-center justify-center">
@@ -272,7 +272,7 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
 
               <button
                 onClick={() => setActiveTab("exercises")}
-                className="w-full flex items-center justify-between py-4 hover:bg-gray-50 rounded-xl transition-all px-2 text-left"
+                className="w-full flex items-center justify-between py-4 hover:bg-gray-50 rounded-xl transition-all px-2 text-left cursor-pointer"
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center">
@@ -288,7 +288,7 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
 
               <button
                 onClick={() => setActiveTab("music")}
-                className="w-full flex items-center justify-between py-4 hover:bg-gray-50 rounded-xl transition-all px-2 text-left"
+                className="w-full flex items-center justify-between py-4 hover:bg-gray-50 rounded-xl transition-all px-2 text-left cursor-pointer"
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center">
@@ -307,7 +307,7 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
       </div>
 
       {/* Quick Action Floating triggers or SOS rapid rescue panel in footer style */}
-      <div className="bg-orange-50/60 border border-orange-100 rounded-[2rem] p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-xxs" id="dw-emergency">
+      <div className="bg-orange-50/60 border border-orange-100 rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-xxs" id="dw-emergency">
         <div className="flex items-center space-x-4">
           <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-700 shrink-0">
             <HeartHandshake className="w-5.5 h-5.5" />
