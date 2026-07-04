@@ -1,158 +1,453 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/yashwant-raghav/mindcare/main/src/assets/logo.png" alt="MindCare Logo" width="80" height="80" onerror="this.src='https://img.shields.io/badge/MindCare-Serene%20Mental%20Wellbeing-blue?style=for-the-badge&logo=heart'" /><br>
-  MindCare - Premium AI-Powered Mental Healthcare Web Application
+  🧠 MindCare – AI-Powered Mental Healthcare Platform
 </h1>
 
 <p align="center">
-  <b>A state-of-the-art cognitive wellbeing platform combining clinical empathy, local tracking privacy, and Google Gemini AI insight.</b>
+  <b>A modern AI-powered mental wellness platform designed to help users track emotions, reduce stress, and improve mental wellbeing through intelligent insights and self-care tools.</b>
 </p>
 
-***
+<p align="center">
 
-<div align="center">
+![GitHub last commit](https://img.shields.io/github/last-commit/yashwant-raghav/mindcare?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/yashwant-raghav/mindcare?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/yashwant-raghav/mindcare?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/yashwant-raghav/mindcare?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/yashwant-raghav/mindcare?label=Last%20Commit&color=3b82f6&logo=git&logoColor=white&style=flat-square)](https://github.com/yashwant-raghav/mindcare)
-[![GitHub code size](https://img.shields.io/github/languages/code-size/yashwant-raghav/mindcare?label=Code%20Size&color=10b981&logo=typescript&logoColor=white&style=flat-square)](https://github.com/yashwant-raghav/mindcare)
-[![GitHub repo size](https://img.shields.io/github/repo-size/yashwant-raghav/mindcare?label=Repo%20Size&color=ef4444&logo=github&logoColor=white&style=flat-square)](https://github.com/yashwant-raghav/mindcare)
-[![GitHub stars](https://img.shields.io/github/stars/yashwant-raghav/mindcare?label=Stars&color=f59e0b&logo=github&style=flat-square)](https://github.com/yashwant-raghav/mindcare)
-[![GitHub issues](https://img.shields.io/github/issues/yashwant-raghav/mindcare?label=Issues&color=8b5cf6&logo=github&style=flat-square)](https://github.com/yashwant-raghav/mindcare/issues)
-
-</div>
-
-***
-
-## 👨💻 Created By
-**[Yashwant Singh Raghav](https://github.com/yashwant-raghav)**  
-Feel free to connect on GitHub, star the repository, or open issues to contribute to the future of AI-assisted mental wellness!
+</p>
 
 ---
 
-## 📊 Project Overview
+# 👨‍💻 Developer
 
-Welcome to **MindCare**, a comprehensive web application engineered to support, track, and elevate your psychological wellbeing. By leveraging state-of-the-art Cognitive Behavioral Therapy (CBT) models, user-centric analytics, and serene aesthetics, MindCare provides an accessible, non-diagnostic space to externalize distress, build healthy habits, and practice daily mindfulness.
+### **Yashwant Singh Raghav**
 
-Unlike traditional health trackers, MindCare focuses on clinical empathy and personal agency. It tracks emotional patterns, provides AI-driven cognitive breakdowns, offers guided somatic release timers, and serves ambient meditation soundtracks—all wrapped in a beautifully polished user interface designed to inspire calmness.
+🎓 MCA Student
 
----
+💻 Passionate about AI, Web Development & Data Analytics
 
-## ✨ Core Features
+⭐ If you like this project, don't forget to **Star** the repository.
 
-### 🏡 1. Serene Dashboard
-A welcoming central interface displaying active daily streaks, accumulated mindfulness minutes, and daily mental hygiene tips. Features a quick-log vibe tracker for swift, daily mood checks.
-
-### 📈 2. Mood Journey
-An advanced mood logging suite that prompts users to check in with detailed context (sleep quality, work stress, relationship status, physical wellness). It calculates an **Emotional Stability Index (0-100%)** and leverages AI to provide single-sentence grounding advice tailored to your emotional triggers.
-
-### ✍️ 3. My Journal
-A secure, interactive writing canvas supporting private daily logs. Upon saving, entries can be evaluated using automated CBT-style analysis to discover underlying psychological themes, assess emotional tone, and suggest specific cognitive coping exercises.
-
-### 🎵 4. Sonic Sanctuary (Music Therapy)
-An atmospheric soundscape player that features multi-track ambient loops (Rainstorm, Forest Whispers, Binaural Waves) alongside an interactive, animated box-breathing helper designed to slow down heartbeat and regulate stress.
-
-### 🧘 5. Mindful Motion (Somatic Workouts)
-A collection of physical release recommendations, stretching plans, and yoga poses mapped out with step-by-step guidance and live count-down timers to help users discharge physical stress.
-
-### 💬 6. AI CBT Companion ("Serene Clarity")
-An empathetic, conversational therapist assistant powered by the **Google Gemini API**. It provides a gentle sounding board for emotional validation, identifies cognitive distortions, and builds customized coping plans on demand.
-
-### 🔒 7. Privacy First Local Storage
-To ensure complete peace of mind, all personal journals, mood history, streak statistics, and profiles are cached locally on your device. The app supports full profile customizations, local credential resets, and complete data purges.
+GitHub:
+https://github.com/yashwant-raghav
 
 ---
 
-## 🚀 Tech Stack
+# 📖 Project Overview
 
-### Frontend & Core
-*   ![React](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-*   ![TypeScript](https://img.shields.io/badge/TypeScript%205.8-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-*   ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS%204.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-*   ![Vite](https://img.shields.io/badge/Vite%206-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-*   ![Motion](https://img.shields.io/badge/Motion%2012-0055FF?style=for-the-badge&logo=framer&logoColor=white) *(Framer Motion)*
+**MindCare** is an AI-powered Mental Healthcare Web Application developed to support individuals in monitoring and improving their mental wellbeing.
 
-### Backend & AI Service
-*   ![Express](https://img.shields.io/badge/Express%204-000000?style=for-the-badge&logo=express&logoColor=white)
-*   ![Google Gemini AI](https://img.shields.io/badge/Google%20Gemini%20API-4285F4?style=for-the-badge&logo=google-gemini&logoColor=white) *(using `@google/genai`)*
-*   ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-*   ![TSX](https://img.shields.io/badge/tsx-3178C6?style=for-the-badge&logo=ts-node&logoColor=white) *(TypeScript Execute)*
+The platform combines Artificial Intelligence, mood tracking, journaling, guided exercises, meditation music, and intelligent emotional analysis into a single easy-to-use application.
+
+Users can maintain their emotional health, identify stress patterns, write personal journals, receive AI-generated insights, and practice mindfulness through an intuitive interface.
+
+The application focuses on providing a safe, private, and user-friendly environment for improving daily mental wellness.
 
 ---
 
-## 📂 Project Structure
+# ✨ Features
+
+## 🏠 Beautiful Dashboard
+
+- Modern UI
+- Daily progress
+- Wellness statistics
+- Quick navigation
+
+---
+
+## 😊 Mood Tracking
+
+- Daily mood logging
+- Emotional history
+- Mood analytics
+- Progress visualization
+
+---
+
+## 📔 Personal Journal
+
+- Secure journal entries
+- Daily notes
+- Emotional reflection
+- AI-assisted journal analysis
+
+---
+
+## 🤖 AI Mental Health Assistant
+
+Powered by Google Gemini AI
+
+Features:
+
+- Emotional support
+- Mental wellness suggestions
+- CBT-inspired guidance
+- Stress analysis
+- Personalized recommendations
+
+---
+
+## 🎵 Music Therapy
+
+Relax with calming sounds:
+
+- Rain
+- Nature
+- Forest
+- Ocean
+- Meditation music
+
+---
+
+## 🧘 Mindful Exercises
+
+- Yoga
+- Stretching
+- Breathing exercises
+- Relaxation techniques
+- Meditation sessions
+
+---
+
+## 👤 User Profile
+
+- Personal information
+- Wellness statistics
+- Activity history
+- Progress tracking
+
+---
+
+## 🔐 Authentication
+
+- User Registration
+- Login
+- Secure Authentication
+- Local user management
+
+---
+
+## 📊 Mental Health Analysis
+
+- Emotional trends
+- Mood reports
+- AI-generated insights
+- Wellness score
+
+---
+
+# 🚀 Technology Stack
+
+## Frontend
+
+- React
+- TypeScript
+- HTML5
+- CSS3
+- Vite
+
+---
+
+## Backend
+
+- Python
+- Flask
+
+---
+
+## Database
+
+- SQLite
+
+---
+
+## AI
+
+- Google Gemini API
+
+---
+
+## Languages Used
+
+- Python
+- TypeScript
+- JavaScript
+- HTML
+- CSS
+- SQL
+
+---
+
+# 📂 Project Structure
 
 ```
-mindcare/
+MindCare/
+│
 ├── src/
 │   ├── components/
-│   │   ├── AIAssessment.tsx      # Google Gemini CBT Chatbot & Stress Assessment
-│   │   ├── Auth.tsx              # Secure Local User Signup & Authentication
-│   │   ├── Dashboard.tsx         # Serene Dashboard (Overview, Streak Tracker)
-│   │   ├── LandingPage.tsx       # Welcoming Portal (Introduction to MindCare)
-│   │   ├── MindfulMotion.tsx     # Somatic stretching & Yoga timers
-│   │   ├── MoodJourney.tsx       # Mood History logging & groundings
-│   │   ├── MyJournal.tsx         # Diary space with CBT Analysis
-│   │   ├── Profile.tsx           # Progress resetting & user metadata options
-│   │   ├── Sidebar.tsx           # Sidebar navigation panel
-│   │   └── SonicSanctuary.tsx    # Ambient sound therapy & boxed breathing
-│   ├── App.tsx                   # Central router & state container
-│   ├── index.css                 # Global styles & Tailwind CSS setup
-│   ├── main.tsx                  # React DOM anchor
-│   └── types.ts                  # Shared TypeScript interfaces
-├── server.ts                     # Express production backend & Gemini Proxy
-├── vite.config.ts                # Vite build options & development tools
-├── tsconfig.json                 # TypeScript build configurations
-└── package.json                  # Application dependencies and execution scripts
+│   │
+│   ├── Auth.tsx
+│   ├── Dashboard.tsx
+│   ├── LandingPage.tsx
+│   ├── MoodJourney.tsx
+│   ├── MyJournal.tsx
+│   ├── AIAssessment.tsx
+│   ├── SonicSanctuary.tsx
+│   ├── MindfulMotion.tsx
+│   ├── Profile.tsx
+│   └── Sidebar.tsx
+│
+├── app.py
+├── database.py
+├── mindcare.db
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+└── README.md
 ```
 
 ---
 
-## ⚙️ Local Setup and Installation
+# ⚙ Installation
 
-### 1. Prerequisites
-Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended) on your machine.
+## 1 Clone Repository
 
-### 2. Clone the Repository
 ```bash
 git clone https://github.com/yashwant-raghav/mindcare.git
+```
+
+---
+
+## 2 Move into Project
+
+```bash
 cd mindcare
 ```
 
-### 3. Install Dependencies
+---
+
+## 3 Install Frontend Dependencies
+
 ```bash
 npm install
 ```
 
-### 4. Configure Environment Variables
-Create a file named `.env` or `.env.local` in the project root directory and add your Google Gemini API Key:
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-> **Note:** If `GEMINI_API_KEY` is not supplied, the application will automatically activate its smart rules-based **local fallback mode** allowing you to test all journal analysis, mood rating insights, and chatbots without an active API key!
+---
 
-### 5. Launch the Development Server
-Run the local Vite and Express dev server:
+## 4 Install Python Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 5 Run Backend
+
+```bash
+python app.py
+```
+
+---
+
+## 6 Run Frontend
+
 ```bash
 npm run dev
 ```
-Open your browser and navigate to `http://localhost:3000` to interact with the application.
 
-### 6. Build for Production
-To bundle compile and run in a optimized production environment:
-```bash
-# Compile client assets and bundle server code
-npm run build
+---
 
-# Start the Node production server
-npm run start
+Open browser
+
+```
+http://localhost:5173
 ```
 
 ---
 
-## 🛡️ License
+# 📸 Screenshots
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Home Page
+
+<p align="center">
+  <img src="C:\Users\pc\Pictures\Screenshots\homepage.png" alt="Landing Page" width="100%">
+</p>
+
+> Beautiful landing page introducing MindCare with AI-powered mental wellness features.
+
 
 ---
 
+## Dashboard
+
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/yashwant-raghav">Yashwant Singh Raghav</a>
+  <img src="C:\Users\pc\Pictures\Screenshots\dashboard.png" alt="Dashboard" width="100%">
 </p>
+
+> Personalized dashboard displaying wellness insights, daily check-ins, mindfulness progress, and motivational content.
+
+
+---
+
+## Mood Tracker
+
+<p align="center">
+  <img src="C:\Users\pc\Pictures\Screenshots\mood tracker.png" alt="Mood Journey" width="100%">
+</p>
+
+> Track emotions, monitor mental health trends, and receive AI-generated wellness insights.
+
+
+---
+
+## Mindful motion
+
+<p align="center">
+  <img src="C:\Users\pc\Pictures\Screenshots\motion.png" alt="Mindful Motion" width="100%">
+</p>
+
+> Practice guided breathing exercises, mindfulness routines, meditation, yoga, and stress-relief activities.
+
+
+---
+
+## AI Chatbot
+
+<p align="center">
+  <img src="C:\Users\pc\Pictures\Screenshots\AI chatbot.png" alt="AI Chatbot" width="100%">
+</p>
+
+---
+
+## Music Therapy
+
+<p align="center">
+  <img src="C:\Users\pc\Pictures\Screenshots\music thereaphy.png" alt="Sonic Sanctuary" width="100%">
+</p>
+
+> Relax with calming music, meditation soundscapes, YouTube integration, and ambient therapy sessions.
+
+
+---
+
+# 🎯 Project Objectives
+
+- Improve mental wellbeing
+- Encourage healthy habits
+- Reduce stress
+- Track emotional patterns
+- Provide AI assistance
+- Promote mindfulness
+- Support self-care
+
+---
+
+# 🔮 Future Enhancements
+
+- Therapist Booking
+- Video Consultation
+- Appointment Scheduling
+- Email Notifications
+- Mobile Application
+- Dark Mode
+- Cloud Database
+- Admin Panel
+- Community Support
+- Daily Challenges
+- Habit Tracker
+- Wearable Integration
+- Multi-language Support
+- PDF Reports
+- Voice Assistant
+
+---
+
+# 📈 Project Highlights
+
+✅ AI-Powered Mental Health Assistant
+
+✅ Mood Tracking
+
+✅ Personal Journal
+
+✅ Music Therapy
+
+✅ Guided Exercises
+
+✅ User Authentication
+
+✅ Mental Health Dashboard
+
+✅ Modern Responsive UI
+
+✅ Google Gemini AI Integration
+
+✅ SQLite Database
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork Repository
+
+2. Create New Branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit Changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push Changes
+
+```bash
+git push origin feature-name
+```
+
+5. Open Pull Request
+
+---
+
+# 🛡 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 🙏 Acknowledgements
+
+Special thanks to
+
+- Google Gemini AI
+- React Community
+- Flask Community
+- Vite
+- Open Source Contributors
+
+---
+
+# 📬 Contact
+
+## Yashwant Singh Raghav
+
+GitHub
+
+https://github.com/yashwant-raghav
+
+---
+
+<h3 align="center">
+⭐ If you found this project useful, please consider giving it a Star ⭐
+</h3>
+
+<h3 align="center">
+Made with ❤️ by Yashwant Singh Raghav
+</h3>
