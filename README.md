@@ -272,7 +272,7 @@ http://localhost:5173
 ## Home Page
 
 <p align="center">
-  <img src="C:\Users\pc\Pictures\Screenshots\homepage.png" alt="Landing Page" width="100%">
+  <img src="./screenshots/homepage.png" alt="Landing Page" width="100%">
 </p>
 
 > Beautiful landing page introducing MindCare with AI-powered mental wellness features.
@@ -283,7 +283,7 @@ http://localhost:5173
 ## Dashboard
 
 <p align="center">
-  <img src="C:\Users\pc\Pictures\Screenshots\dashboard.png" alt="Dashboard" width="100%">
+  <img src="./screenshots/dashboard.png" alt="Dashboard" width="100%">
 </p>
 
 > Personalized dashboard displaying wellness insights, daily check-ins, mindfulness progress, and motivational content.
@@ -294,7 +294,7 @@ http://localhost:5173
 ## Mood Tracker
 
 <p align="center">
-  <img src="C:\Users\pc\Pictures\Screenshots\mood tracker.png" alt="Mood Journey" width="100%">
+  <img src="./screenshots/mood-tracker.png" alt="Mood Journey" width="100%">
 </p>
 
 > Track emotions, monitor mental health trends, and receive AI-generated wellness insights.
@@ -305,7 +305,7 @@ http://localhost:5173
 ## Mindful motion
 
 <p align="center">
-  <img src="C:\Users\pc\Pictures\Screenshots\motion.png" alt="Mindful Motion" width="100%">
+  <img src="./screenshots/mindful-motion.png" alt="Mindful Motion" width="100%">
 </p>
 
 > Practice guided breathing exercises, mindfulness routines, meditation, yoga, and stress-relief activities.
@@ -316,7 +316,7 @@ http://localhost:5173
 ## AI Chatbot
 
 <p align="center">
-  <img src="C:\Users\pc\Pictures\Screenshots\AI chatbot.png" alt="AI Chatbot" width="100%">
+  <img src="./screenshots/ai-chatbot.png" alt="AI Chatbot" width="100%">
 </p>
 
 ---
@@ -324,7 +324,7 @@ http://localhost:5173
 ## Music Therapy
 
 <p align="center">
-  <img src="C:\Users\pc\Pictures\Screenshots\music thereaphy.png" alt="Sonic Sanctuary" width="100%">
+  <img src="./screenshots/sonic-sanctuary.png" alt="Sonic Sanctuary" width="100%">
 </p>
 
 > Relax with calming music, meditation soundscapes, YouTube integration, and ambient therapy sessions.
