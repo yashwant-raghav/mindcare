@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Outfit", sans-serif;
+}
+
+/* Equalizer sound loops motion keyframes */
+@keyframes eq-scale {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1.1); }
+}
+
+.animate-eq-bar-1 {
+  transform-origin: bottom;
+  animation: eq-scale 1s infinite ease-in-out;
+}
+
+.animate-eq-bar-2 {
+  transform-origin: bottom;
+  animation: eq-scale 0.7s infinite ease-in-out;
+  animation-delay: 0.1s;
+}
+
+.animate-eq-bar-3 {
+  transform-origin: bottom;
+  animation: eq-scale 1.3s infinite ease-in-out;
+  animation-delay: 0.25s;
+}
+
+/* Gentle spin for weather sun indicator */
+.animate-spin-slow {
+  animation: spin 16s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 3.5s infinite ease-in-out;
+}
+
+/* Custom visual adjustments */
+input[type="range"] {
+  background: #EAE6DD;
+  height: 4px;
+  border-radius: 2px;
+}
+

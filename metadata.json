@@ -1,0 +1,6 @@
+{
+  "name": "MindCare",
+  "description": "An AI-powered mental health companion providing secure authentication, daily mood tracking, guided breathing/meditation, cognitive journaling with AI analysis, progress charts, and soothing audio playlists.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
