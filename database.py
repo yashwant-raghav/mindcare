@@ -1,9 +1,23 @@
 import sqlite3
 import json
 import os
+import shutil
 from werkzeug.security import generate_password_hash, check_password_hash
 
-DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mindcare.db")
+# Determine DB path depending on environment (Vercel serverless has a read-only filesystem except for /tmp)
+IS_VERCEL = os.environ.get("VERCEL") or os.environ.get("VERCEL_ENV")
+
+if IS_VERCEL:
+    DB_PATH = "/tmp/mindcare.db"
+    base_db = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mindcare.db")
+    if not os.path.exists(DB_PATH) and os.path.exists(base_db):
+        try:
+            shutil.copy(base_db, DB_PATH)
+        except Exception as e:
+            print(f"Failed to copy base database: {e}")
+else:
+    DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mindcare.db")
+
 
 def get_db_connection():
     conn = sqlite3.connect(DB_PATH)
