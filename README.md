@@ -1,4 +1,4 @@
-h1 align="center">
+<h1 align="center">
   <img src="https://raw.githubusercontent.com/yashwant-raghav/mindcare/main/src/assets/logo.png" alt="MindCare Logo" width="80" height="80" onerror="this.src='https://img.shields.io/badge/MindCare-Serene%20Mental%20Wellbeing-blue?style=for-the-badge&logo=heart'" /><br>
   MindCare - Premium AI-Powered Mental Healthcare Web Application
 </h1>
