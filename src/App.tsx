@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { User, MoodEntry, JournalEntry } from "./types";
+import { User, MoodEntry, JournalEntry, EmotionSession } from "./types";
 import { Menu } from "lucide-react";
 import LandingPage from "./components/LandingPage";
 import Auth from "./components/Auth";
@@ -11,6 +11,7 @@ import SonicSanctuary from "./components/SonicSanctuary";
 import MindfulMotion from "./components/MindfulMotion";
 import AIAssessment from "./components/AIAssessment";
 import Profile from "./components/Profile";
+import EmotionTracker from "./components/EmotionTracker";
 
 const PREPOPULATED_MOODS: MoodEntry[] = [
   {
@@ -72,7 +73,20 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<string>("dashboard");
   const [moodEntries, setMoodEntries] = useState<MoodEntry[]>([]);
   const [journalEntries, setJournalEntries] = useState<JournalEntry[]>([]);
+  const [emotionSessions, setEmotionSessions] = useState<EmotionSession[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const handleSaveEmotionSession = async (session: EmotionSession) => {
+    if (!user) return;
+    setEmotionSessions((prev) => [session, ...prev]);
+    const minsGained = Math.max(1, Math.ceil(session.duration / 60));
+    const updatedUser: User = {
+      ...user,
+      totalMinutes: user.totalMinutes + minsGained,
+      streak: user.streak + 1
+    };
+    await handleUpdateUserOnBackend(updatedUser);
+  };
 
   // Helper to sync updated user details with backend SQL database
   const handleUpdateUserOnBackend = async (updatedUser: User) => {
@@ -308,6 +322,14 @@ export default function App() {
             setActiveTab={setActiveTab}
           />
         );
+      case "emotion-tracker":
+        return (
+          <EmotionTracker 
+            user={user} 
+            onSaveSession={handleSaveEmotionSession} 
+            setActiveTab={setActiveTab}
+          />
+        );
       case "mood":
         return (
           <MoodJourney 
@@ -387,6 +409,7 @@ export default function App() {
    // 3. Authenticated dashboard layout with permanent side rails
   const activeTabLabels: Record<string, string> = {
     dashboard: "Dashboard",
+    "emotion-tracker": "AI Emotion Tracker",
     mood: "Mood Journey",
     journal: "My Journal",
     music: "Sonic Sanctuary",

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { 
   Smile, CloudRain, Sun, Calendar, Plus, 
   ArrowRight, Sparkles, BookOpen, Music, Activity, 
-  HeartHandshake, Compass
+  HeartHandshake, Compass, Camera
 } from "lucide-react";
 import { User, MoodEntry, Quote } from "../types";
 
@@ -254,6 +254,22 @@ export default function Dashboard({ user, moodEntries, onAddMood, setActiveTab }
             <h3 className="text-xs font-mono font-bold tracking-wider text-gray-400 uppercase">Quick Journeys</h3>
             
             <div className="divide-y divide-gray-100">
+              <button
+                onClick={() => setActiveTab("emotion-tracker")}
+                className="w-full flex items-center justify-between py-4 hover:bg-gray-50 rounded-xl transition-all px-2 text-left cursor-pointer"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center">
+                    <Camera className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-gray-900">AI Face Expression Analysis</h4>
+                    <p className="text-[10px] text-gray-400">Real-time local camera expression tracking</p>
+                  </div>
+                </div>
+                <ArrowRight className="w-4 h-4 text-gray-300" />
+              </button>
+
               <button
                 onClick={() => setActiveTab("journal")}
                 className="w-full flex items-center justify-between py-4 hover:bg-gray-50 rounded-xl transition-all px-2 text-left cursor-pointer"

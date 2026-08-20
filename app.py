@@ -220,6 +220,32 @@ def delete_journal(journal_id):
         
     return jsonify({"success": True})
 
+# --- Emotion Sessions API endpoints ---
+
+@app.route("/api/emotion-sessions", methods=["GET"])
+def get_emotion_sessions():
+    email = request.args.get("email")
+    if not email:
+        return jsonify({"error": "Email parameter is required."}), 400
+        
+    sessions = database.get_emotion_sessions(email)
+    return jsonify(sessions)
+
+@app.route("/api/emotion-sessions", methods=["POST"])
+def add_emotion_session():
+    data = request.json or {}
+    email = data.get("email")
+    session = data.get("session")
+    
+    if not email or not session:
+        return jsonify({"error": "Email and session data are required."}), 400
+        
+    success = database.add_emotion_session(email, session)
+    if not success:
+        return jsonify({"error": "Failed to save emotion session."}), 500
+        
+    return jsonify({"success": True})
+
 # --- Gemini API Proxies ---
 
 @app.route("/api/analyze-journal", methods=["POST"])

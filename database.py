@@ -81,6 +81,26 @@ def init_db():
         FOREIGN KEY (user_email) REFERENCES users(email) ON DELETE CASCADE
     );
     """)
+
+    # 4. Create emotion_sessions table
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS emotion_sessions (
+        id TEXT PRIMARY KEY,
+        user_email TEXT NOT NULL,
+        session_date TEXT NOT NULL,
+        duration INTEGER NOT NULL,
+        dominant_emotion TEXT NOT NULL,
+        happy_percentage REAL NOT NULL,
+        sad_percentage REAL NOT NULL,
+        neutral_percentage REAL NOT NULL,
+        angry_percentage REAL NOT NULL,
+        surprise_percentage REAL NOT NULL,
+        average_confidence REAL NOT NULL,
+        expression_stability REAL NOT NULL,
+        timestamp TEXT NOT NULL,
+        FOREIGN KEY (user_email) REFERENCES users(email) ON DELETE CASCADE
+    );
+    """)
     
     conn.commit()
     conn.close()
@@ -329,6 +349,65 @@ def delete_journal(email, journal_id):
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute("DELETE FROM journal_entries WHERE user_email = ? AND id = ?", (email_clean, journal_id))
+    conn.commit()
+    conn.close()
+    return True
+
+# Helper to serialize emotion session
+def serialize_emotion_session(row):
+    if not row:
+        return None
+    return {
+        "id": row["id"],
+        "userEmail": row["user_email"],
+        "sessionDate": row["session_date"],
+        "duration": row["duration"],
+        "dominantEmotion": row["dominant_emotion"],
+        "happyPercentage": row["happy_percentage"],
+        "sadPercentage": row["sad_percentage"],
+        "neutralPercentage": row["neutral_percentage"],
+        "angryPercentage": row["angry_percentage"],
+        "surprisePercentage": row["surprise_percentage"],
+        "averageConfidence": row["average_confidence"],
+        "expressionStability": row["expression_stability"],
+        "timestamp": row["timestamp"]
+    }
+
+# Emotion Sessions CRUD
+def get_emotion_sessions(email):
+    email_clean = email.strip().lower()
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM emotion_sessions WHERE user_email = ? ORDER BY timestamp DESC, id DESC", (email_clean,))
+    rows = cursor.fetchall()
+    conn.close()
+    return [serialize_emotion_session(r) for r in rows]
+
+def add_emotion_session(email, session_data):
+    import time
+    email_clean = email.strip().lower()
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    session_id = session_data.get("id", f"session_{int(time.time()*1000)}")
+    session_date = session_data.get("sessionDate")
+    duration = session_data.get("duration", 0)
+    dominant_emotion = session_data.get("dominantEmotion", "Neutral")
+    happy_percentage = session_data.get("happyPercentage", 0.0)
+    sad_percentage = session_data.get("sadPercentage", 0.0)
+    neutral_percentage = session_data.get("neutralPercentage", 0.0)
+    angry_percentage = session_data.get("angryPercentage", 0.0)
+    surprise_percentage = session_data.get("surprisePercentage", 0.0)
+    average_confidence = session_data.get("averageConfidence", 0.0)
+    expression_stability = session_data.get("expressionStability", 0.0)
+    timestamp = session_data.get("timestamp")
+
+    cursor.execute(
+        """INSERT INTO emotion_sessions 
+        (id, user_email, session_date, duration, dominant_emotion, happy_percentage, sad_percentage, neutral_percentage, angry_percentage, surprise_percentage, average_confidence, expression_stability, timestamp)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+        (session_id, email_clean, session_date, duration, dominant_emotion, happy_percentage, sad_percentage, neutral_percentage, angry_percentage, surprise_percentage, average_confidence, expression_stability, timestamp)
+    )
     conn.commit()
     conn.close()
     return True

@@ -1,6 +1,6 @@
 import { 
   Smile, BookOpen, Music, Activity, 
-  Compass, User, LogOut, MessageSquareHeart, X 
+  Compass, User, LogOut, MessageSquareHeart, X, Camera
 } from "lucide-react";
 import { User as UserType } from "../types";
 
@@ -16,6 +16,7 @@ interface SidebarProps {
 export default function Sidebar({ activeTab, setActiveTab, user, onLogout, isOpen, onClose }: SidebarProps) {
   const menuItems = [
     { id: "dashboard", label: "Dashboard", icon: Compass },
+    { id: "emotion-tracker", label: "AI Emotion Tracker", icon: Camera },
     { id: "mood", label: "Mood Journey", icon: Smile },
     { id: "journal", label: "My Journal", icon: BookOpen },
     { id: "music", label: "Sonic Sanctuary", icon: Music },

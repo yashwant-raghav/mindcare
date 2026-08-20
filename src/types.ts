@@ -71,3 +71,37 @@ export interface ChatMessage {
   text: string;
   timestamp: string;
 }
+
+export type EmotionCategory = 'Happy' | 'Sad' | 'Neutral' | 'Angry' | 'Surprised';
+
+export interface ExpressionScores {
+  Happy: number;
+  Sad: number;
+  Neutral: number;
+  Angry: number;
+  Surprised: number;
+}
+
+export interface ExpressionSample {
+  timestamp: string;
+  timeInSeconds: number;
+  emotion: EmotionCategory;
+  confidence: number;
+  scores: ExpressionScores;
+}
+
+export interface EmotionSession {
+  id: string;
+  userEmail: string;
+  sessionDate: string;
+  duration: number;
+  dominantEmotion: EmotionCategory;
+  happyPercentage: number;
+  sadPercentage: number;
+  neutralPercentage: number;
+  angryPercentage: number;
+  surprisePercentage: number;
+  averageConfidence: number;
+  expressionStability: number;
+  timestamp: string;
+}
